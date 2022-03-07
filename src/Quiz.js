@@ -1,4 +1,3 @@
-import { cleanup } from "@testing-library/react";
 import React, { useState, useEffect } from "react";
 import LeaderBoard from "./LeaderBoard";
 
@@ -7,17 +6,19 @@ function Quiz() {
   const [displayLeaders, setDisplayLeaders] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setTimeRemaining(timeRemaining - 1), 1000);
+    const timer = setTimeout(
+      () => (timeRemaining > 0 ? setTimeRemaining(timeRemaining - 1) : null),
+      1000
+    );
     if (timeRemaining === 0) timesUp();
     return function cleanup() {
-      clearTimeout();
+      clearTimeout(timer);
     };
-  }, [timeRemaining]);
+  });
 
   function timesUp() {
     setDisplayLeaders(true);
-    cleanup();
-    setTimeRemaining("--");
+    // setTimeRemaining("--");
   }
   return (
     <div>
