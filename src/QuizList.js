@@ -1,26 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const categories = [
-  "general_knowledge",
-  "food_and_drink",
-  "geography",
-  "history",
-  "literature",
-  "movies",
-  "music",
-  "science",
-  "society_and_culture",
-  "sport_and_leisure",
-];
-function QuizList({ quiz, onQuizClick }) {
+function QuizList({ categories }) {
   const mappedcategories = categories.map((c) => (
-    <li key={c} onClick={handleQuizClick}>
-      {c}
+    <li key={c}>
+      <Link to={`quiz/${c}`}>{c}</Link>
     </li>
   ));
-  function handleQuizClick(e) {
-    onQuizClick(e.target.innerText);
-  }
   return (
     <div>
       QuizList
