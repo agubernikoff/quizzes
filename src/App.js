@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import QuizList from "./QuizList";
 import Quiz from "./Quiz";
@@ -10,6 +10,7 @@ function App() {
     setQuizClicked(quiz);
   }
   console.log(quizClicked);
+
   return (
     <div className="App">
       App
