@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 // import LeaderBoard from "./LeaderBoard";
 import Question from "./Question";
 
-function Quiz() {
+function Quiz({ quizClicked }) {
   //   const [timeRemaining, setTimeRemaining] = useState(10);
   //   const [displayLeaders, setDisplayLeaders] = useState(false);
   const [questions, setQuestions] = useState([]);
@@ -10,7 +10,7 @@ function Quiz() {
   useEffect(
     () =>
       fetch(
-        "https://api.trivia.willfry.co.uk/questions?categories=sport_and_leisure&limit=5"
+        `https://api.trivia.willfry.co.uk/questions?categories=${quizClicked}&limit=5`
       )
         .then((resp) => resp.json())
         .then((data) => setQuestions(data)),

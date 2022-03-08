@@ -16,7 +16,7 @@ function App() {
       App
       <Header />
       {quizClicked ? (
-        <Quiz />
+        <Quiz quizClicked={quizClicked} />
       ) : (
         <QuizList quiz="quiz" onQuizClick={onQuizClick} />
       )}

@@ -22,12 +22,11 @@ function Question({ q }) {
   }
   const answers = [...q.incorrectAnswers, q.correctAnswer];
   console.log(shuffle(answers));
-  const mappedAs = q.incorrectAnswers.map((a) => <h5 key={a}>{a}</h5>);
+  const mappedAs = shuffle(answers).map((a) => <h5 key={a}>{a}</h5>);
   return (
     <div>
       <h4>{q.question}</h4>
       {mappedAs}
-      <h5>{q.correctAnswer}</h5>
     </div>
   );
 }
