@@ -16,7 +16,7 @@ function Quiz({ quizClicked }) {
         .then((data) => setQuestions(data)),
     []
   );
-  console.log(questions);
+  console.log(questions[1]);
 
   const mappedQs = questions.map((q) => <Question key={q.id} q={q} />);
   //   useEffect(() => {
@@ -35,7 +35,7 @@ function Quiz({ quizClicked }) {
   //   }
   return (
     <div>
-      {mappedQs}
+      {questions[1] === undefined ? <h4>Loading...</h4> : mappedQs}
       {/* <h1>{timeRemaining} seconds remaining</h1>
       {displayLeaders ? <LeaderBoard /> : null} */}
     </div>
