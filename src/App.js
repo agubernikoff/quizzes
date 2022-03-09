@@ -5,6 +5,7 @@ import Quiz from "./Quiz";
 import "./index.css";
 import { Route, Switch } from "react-router-dom";
 import LeaderBoard from "./LeaderBoard";
+import Results from "./Results";
 
 const categories = [
   "general_knowledge",
@@ -36,6 +37,9 @@ function App() {
         </Route>
         <Route path="/leaders">
           <LeaderBoard />
+        </Route>
+        <Route path="/results">
+          <Results />
         </Route>
       </Switch>
     </div>
