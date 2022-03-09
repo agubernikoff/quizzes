@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 // import LeaderBoard from "./LeaderBoard";
 import Question from "./Question";
 import Results from "./Results";
+import { Link } from "react-router-dom";
 
 function Quiz({ c }) {
   //   const [timeRemaining, setTimeRemaining] = useState(10);
@@ -12,7 +13,7 @@ function Quiz({ c }) {
   useEffect(
     () =>
       fetch(
-        `https://api.trivia.willfry.co.uk/questions?categories=${c}&limit=3`
+        `https://api.trivia.willfry.co.uk/questions?categories=${c}&limit=5`
       )
         .then((resp) => resp.json())
         .then((data) => setQuestions(data)),
@@ -25,11 +26,10 @@ function Quiz({ c }) {
 
         
   function handleAnswerClick(clickedAnswer){
-    const newQs = questions.filter((q) => {
+    const newQs = questions.filter((q)=> {
     if (clickedAnswer === q.correctAnswer){
-      return setScoreArray(scoreArray => [...scoreArray, clickedAnswer])
-    }
-  })}
+      setScoreArray(scoreArray => [...scoreArray, clickedAnswer])
+    } })}
   
     const score = scoreArray.length;
 
@@ -50,10 +50,8 @@ function Quiz({ c }) {
   return (
     <div>
       {questions[1] === undefined ? <h4>Loading...</h4> : mappedQs}
-      <h1>
-      Your're score: {score}
-      </h1>
-      
+      {score}
+      <button><Link to={"/results"}>Submit</Link></button>
       {/* <h1>{timeRemaining} seconds remaining</h1>
       {displayLeaders ? <LeaderBoard /> : null} */}
     </div>

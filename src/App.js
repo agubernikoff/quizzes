@@ -38,7 +38,7 @@ function App() {
         <Route path="/leaders">
           <LeaderBoard />
         </Route>
-        <Route path="/results">
+        <Route exact path="/results">
           <Results />
         </Route>
       </Switch>
