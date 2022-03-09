@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 
 function QuizList({ categories }) {
   const mappedcategories = categories.map((c) => (
-    <li key={c}>
+    <ul key={c}>
       <Link to={`quiz/${c}`}>{c.replaceAll('_',' ')}</Link>
-    </li>
+    </ul>
   ));
   return (
-    <div>
-      Quiz List
-      <ul>{mappedcategories}</ul>
+    <div className="quiz-list">
+      <h2>Quiz List</h2>
+      {mappedcategories}
     </div>
   );
 }
