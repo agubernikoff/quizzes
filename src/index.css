@@ -11,3 +11,59 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+header {
+  border-bottom: 1px #ccc solid;
+  background-image: url("https://as1.ftcdn.net/v2/jpg/02/66/33/90/1000_F_266339022_WXAMVBMDBlGeO1cWeXOgkpzbnZR1ca4y.jpg");
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+header h1 {
+  line-height: 1;
+  font-family: Verdana;
+  margin-left: 22vw;
+  font-size: 50px;
+  color: rosybrown;
+    text-shadow: -1px 1px 0 #000,
+                  1px 1px 0 #000,
+                 1px -1px 0 #000,
+                -1px -1px 0 #000
+  
+}
+
+header img {
+  width: 100px;
+  height: auto
+}
+
+.quiz-list h2 {
+  font-size: 40px;
+  font-family: Verdana;
+  line-height: 1;
+  color: palegoldenrod;
+  margin-left: 20px;
+  width: 100%;
+    text-shadow: -1px 1px 0 #000,
+                  1px 1px 0 #000,
+                 1px -1px 0 #000,
+                -1px -1px 0 #000
+}
+
+.quiz-list ul {
+    margin: .5rem;
+    box-shadow: 0 0 7px 0 #ddd;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 300px;
+    background-color: bisque;
+    height: 25px;
+    /* float: inline-end; */
+  }
+
+  .quiz-list{
+      display: flex;
+      flex-wrap: wrap;
+      
+  }
