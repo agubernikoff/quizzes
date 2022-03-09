@@ -3,12 +3,15 @@ import React, { useState, useEffect } from "react";
 import Question from "./Question";
 import Results from "./Results";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 function Quiz({ questions, c }) {
   //   const [timeRemaining, setTimeRemaining] = useState(10);
   //   const [displayLeaders, setDisplayLeaders] = useState(false);
   const [scoreArray, setScoreArray] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
+  const history=useHistory();
+
   console.log(questions);
 
   const mappedQs = questions.map((q) => (
@@ -26,6 +29,10 @@ function Quiz({ questions, c }) {
   console.log(scoreArray);
 
   const score = scoreArray.length;
+  
+  const clickMe = (data) => {
+    history.push("/results", {data})
+  }
 
   //   useEffect(() => {
   //     const timer = setTimeout(
@@ -44,13 +51,12 @@ function Quiz({ questions, c }) {
   // console.log(c);
   // console.log(questions[1]);
   // console.log(questions[1].category.toLowerCase().includes(c.toLowerCase()));
+
+
   return (
     <div>
       {questions[1] ? mappedQs[currentQuestion] : <h4>Loading...</h4>}
-      {score}
-      <button>
-        <Link to={"/results"}>Submit</Link>
-      </button>
+        <button className="results-button" onClick={() => clickMe({score})}>See Results</button>
       {/* <h1>{timeRemaining} seconds remaining</h1>
       {displayLeaders ? <LeaderBoard /> : null} */}
     </div>
