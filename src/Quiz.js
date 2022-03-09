@@ -12,7 +12,7 @@ function Quiz({ c }) {
   useEffect(
     () =>
       fetch(
-        `https://api.trivia.willfry.co.uk/questions?categories=${c}&limit=5`
+        `https://api.trivia.willfry.co.uk/questions?categories=${c}&limit=3`
       )
         .then((resp) => resp.json())
         .then((data) => setQuestions(data)),
@@ -28,7 +28,8 @@ function Quiz({ c }) {
     const newQs = questions.filter((q)=> {
     if (clickedAnswer === q.correctAnswer){
       setScoreArray(scoreArray => [...scoreArray, clickedAnswer])
-    } })}
+    } else {alert('Incorrect')}
+  })}
   
     const score = scoreArray.length;
 
@@ -49,7 +50,10 @@ function Quiz({ c }) {
   return (
     <div>
       {questions[1] === undefined ? <h4>Loading...</h4> : mappedQs}
-      {score}
+      <h1>
+      Your're score: {score}
+      </h1>
+      
       {/* <h1>{timeRemaining} seconds remaining</h1>
       {displayLeaders ? <LeaderBoard /> : null} */}
     </div>
