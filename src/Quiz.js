@@ -41,18 +41,12 @@ function Quiz({ questions, c }) {
   //     setDisplayLeaders(true);
   //     // setTimeRemaining("--");
   //   }
-  console.log(c);
-  console.log(questions[1].category);
-  console.log(questions[1].category.toLowerCase().includes(c.toLowerCase()));
+  // console.log(c);
+  // console.log(questions[1]);
+  // console.log(questions[1].category.toLowerCase().includes(c.toLowerCase()));
   return (
     <div>
-      {questions[1].category
-        .toLowerCase()
-        .includes(c.toLowerCase().replaceAll("_", " ")) ? (
-        mappedQs[currentQuestion]
-      ) : (
-        <h4>Loading...</h4>
-      )}
+      {questions[1] ? mappedQs[currentQuestion] : <h4>Loading...</h4>}
       {score}
       <button>
         <Link to={"/results"}>Submit</Link>

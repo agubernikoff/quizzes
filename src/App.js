@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header setQuestions={setQuestions} />
       <Switch>
         {mappedcategories}
         <Route exact path="/">
