@@ -21,7 +21,7 @@ header {
 }
 
 header h1 {
-  display: inline-block; 
+  display: inline-flex; 
   line-height: 1;
   font-family: Verdana;
   margin-left: 8vw;
@@ -37,7 +37,7 @@ header h1 {
 header img {
   width: 100px;
   height: auto;
-  display: inline-block;
+  /* display: flex; */
 }
 
 .quiz-list h2 {
@@ -80,7 +80,7 @@ header img {
   height: 25px;
   font-size: 20px;
   font-family: verdana;
-  display: inline;
+  display: inline-block;
   
  }
 
@@ -95,5 +95,5 @@ header img {
    height: 25px;
    font-size: 20px;
    font-family: Verdana;
-   display: inline;
+   display: inline-block;
  }
