@@ -1,7 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 
-function Results() {
-  return <div>Results</div>;
-}
+function Results({score}){
+   
+  return (
+      <div>Results
+
+      </div>
+  )}
 
 export default Results;

@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 // import LeaderBoard from "./LeaderBoard";
 import Question from "./Question";
+import Results from "./Results";
 
 function Quiz({ c }) {
   //   const [timeRemaining, setTimeRemaining] = useState(10);
   //   const [displayLeaders, setDisplayLeaders] = useState(false);
   const [questions, setQuestions] = useState([]);
   const [scoreArray, setScoreArray] = useState([])
+  const [currentQuestion, setCurrentQuestion] = useState(0)
   useEffect(
     () =>
       fetch(
@@ -20,6 +22,8 @@ function Quiz({ c }) {
 
   const mappedQs = questions.map((q) => <Question handleAnswerClick={handleAnswerClick} key={q.id} q={q} />);
 
+
+        
   function handleAnswerClick(clickedAnswer){
     const newQs = questions.filter((q)=> {
     if (clickedAnswer === q.correctAnswer){
