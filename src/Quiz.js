@@ -25,10 +25,10 @@ function Quiz({ c }) {
 
         
   function handleAnswerClick(clickedAnswer){
-    const newQs = questions.filter((q)=> {
+    const newQs = questions.filter((q) => {
     if (clickedAnswer === q.correctAnswer){
-      setScoreArray(scoreArray => [...scoreArray, clickedAnswer])
-    } else {alert('Incorrect')}
+      return setScoreArray(scoreArray => [...scoreArray, clickedAnswer])
+    }
   })}
   
     const score = scoreArray.length;
