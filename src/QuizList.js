@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-function QuizList({ categories }) {
+function QuizList({ categories, setQuestions }) {
+  function fetchOnClick(c) {
+    fetch(`https://api.trivia.willfry.co.uk/questions?categories=${c}&limit=5`)
+      .then((resp) => resp.json())
+      .then((data) => setQuestions(data));
+  }
+
   const mappedcategories = categories.map((c) => (
     <ul key={c}>
-      <Link to={`quiz/${c}`}>{c.replaceAll('_',' ')}</Link>
+      <Link to={`quiz/${c}`} onClick={() => fetchOnClick(c)}>
+        {c.replaceAll("_", " ")}
+      </Link>
     </ul>
   ));
   return (

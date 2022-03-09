@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./Header";
 import QuizList from "./QuizList";
 import Quiz from "./Quiz";
@@ -21,9 +21,12 @@ const categories = [
 ];
 
 function App() {
+  const [questions, setQuestions] = useState([]);
+  console.log(questions);
+
   const mappedcategories = categories.map((c) => (
-    <Route path={`/quiz/${c}`}>
-      <Quiz c={c} />
+    <Route path={`/quiz/${c}`} key={c}>
+      <Quiz questions={questions} c={c} key={c} />
     </Route>
   ));
 
@@ -33,7 +36,7 @@ function App() {
       <Switch>
         {mappedcategories}
         <Route exact path="/">
-          <QuizList categories={categories} />
+          <QuizList categories={categories} setQuestions={setQuestions} />
         </Route>
         <Route path="/leaders">
           <LeaderBoard />

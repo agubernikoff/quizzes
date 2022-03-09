@@ -4,34 +4,28 @@ import Question from "./Question";
 import Results from "./Results";
 import { Link } from "react-router-dom";
 
-function Quiz({ c }) {
+function Quiz({ questions, c }) {
   //   const [timeRemaining, setTimeRemaining] = useState(10);
   //   const [displayLeaders, setDisplayLeaders] = useState(false);
-  const [questions, setQuestions] = useState([]);
-  const [scoreArray, setScoreArray] = useState([])
-  const [currentQuestion, setCurrentQuestion] = useState(0)
-  useEffect(
-    () =>
-      fetch(
-        `https://api.trivia.willfry.co.uk/questions?categories=${c}&limit=5`
-      )
-        .then((resp) => resp.json())
-        .then((data) => setQuestions(data)),
-    []
-  );
-  console.log(questions[1]);
+  const [scoreArray, setScoreArray] = useState([]);
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  console.log(questions);
 
-  const mappedQs = questions.map((q) => <Question handleAnswerClick={handleAnswerClick} key={q.id} q={q} />);
+  const mappedQs = questions.map((q) => (
+    <Question handleAnswerClick={handleAnswerClick} key={q.id} q={q} />
+  ));
 
+  function handleAnswerClick(clickedAnswer) {
+    const foundAnswer = scoreArray.find((score) => score === clickedAnswer);
+    questions.forEach((q) => {
+      if (clickedAnswer === q.correctAnswer && foundAnswer === undefined)
+        setScoreArray((scoreArray) => [...scoreArray, clickedAnswer]);
+    });
+    setCurrentQuestion(currentQuestion + 1);
+  }
+  console.log(scoreArray);
 
-        
-  function handleAnswerClick(clickedAnswer){
-    const newQs = questions.filter((q)=> {
-    if (clickedAnswer === q.correctAnswer){
-      setScoreArray(scoreArray => [...scoreArray, clickedAnswer])
-    } })}
-  
-    const score = scoreArray.length;
+  const score = scoreArray.length;
 
   //   useEffect(() => {
   //     const timer = setTimeout(
@@ -47,11 +41,22 @@ function Quiz({ c }) {
   //     setDisplayLeaders(true);
   //     // setTimeRemaining("--");
   //   }
+  console.log(c);
+  console.log(questions[1].category);
+  console.log(questions[1].category.toLowerCase().includes(c.toLowerCase()));
   return (
     <div>
-      {questions[1] === undefined ? <h4>Loading...</h4> : mappedQs}
+      {questions[1].category
+        .toLowerCase()
+        .includes(c.toLowerCase().replaceAll("_", " ")) ? (
+        mappedQs[currentQuestion]
+      ) : (
+        <h4>Loading...</h4>
+      )}
       {score}
-      <button><Link to={"/results"}>Submit</Link></button>
+      <button>
+        <Link to={"/results"}>Submit</Link>
+      </button>
       {/* <h1>{timeRemaining} seconds remaining</h1>
       {displayLeaders ? <LeaderBoard /> : null} */}
     </div>
