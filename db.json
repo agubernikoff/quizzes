@@ -1,0 +1,34 @@
+{
+  "leaders": [
+    {
+      "category": "geography",
+      "score": 0,
+      "name": "alexander",
+      "id": 1
+    },
+    {
+      "category": "geography",
+      "score": 0,
+      "name": "lyssie",
+      "id": 2
+    },
+    {
+      "category": "geography",
+      "score": 0,
+      "name": "drew",
+      "id": 3
+    },
+    {
+      "category": "geography",
+      "score": 0,
+      "name": "stephen",
+      "id": 4
+    },
+    {
+      "category": "geography",
+      "score": 0,
+      "name": "alex",
+      "id": 5
+    }
+  ]
+}

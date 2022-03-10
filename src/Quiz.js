@@ -10,7 +10,7 @@ function Quiz({ questions, c }) {
   //   const [displayLeaders, setDisplayLeaders] = useState(false);
   const [scoreArray, setScoreArray] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const history=useHistory();
+  const history = useHistory();
 
   console.log(questions);
 
@@ -29,10 +29,10 @@ function Quiz({ questions, c }) {
   console.log(scoreArray);
 
   const score = scoreArray.length;
-  
+
   const clickMe = (data) => {
-    history.push("/results", {data})
-  }
+    history.push("/results", { data });
+  };
 
   //   useEffect(() => {
   //     const timer = setTimeout(
@@ -48,15 +48,16 @@ function Quiz({ questions, c }) {
   //     setDisplayLeaders(true);
   //     // setTimeRemaining("--");
   //   }
-  // console.log(c);
+  console.log(c);
   // console.log(questions[1]);
   // console.log(questions[1].category.toLowerCase().includes(c.toLowerCase()));
-
 
   return (
     <div>
       {questions[1] ? mappedQs[currentQuestion] : <h4>Loading...</h4>}
-        <button className="results-button" onClick={() => clickMe({score})}>See Results</button>
+      <button className="results-button" onClick={() => clickMe({ score, c })}>
+        See Results
+      </button>
       {/* <h1>{timeRemaining} seconds remaining</h1>
       {displayLeaders ? <LeaderBoard /> : null} */}
     </div>

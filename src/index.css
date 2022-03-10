@@ -1,14 +1,14 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -21,17 +21,14 @@ header {
 }
 
 header h1 {
-  display: inline-flex; 
+  display: inline-flex;
   line-height: 1;
   font-family: Verdana;
   margin-left: 8vw;
   font-size: 50px;
   color: rosybrown;
-    text-shadow: -1px 1px 0 #000,
-                  1px 1px 0 #000,
-                 1px -1px 0 #000,
-                -1px -1px 0 #000
-  
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
 }
 
 header img {
@@ -47,31 +44,28 @@ header img {
   color: palegoldenrod;
   margin-left: 20px;
   width: 100%;
-    text-shadow: -1px 1px 0 #000,
-                  1px 1px 0 #000,
-                 1px -1px 0 #000,
-                -1px -1px 0 #000
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
 }
 
 .quiz-list ul {
-    margin: .5rem;
-    box-shadow: 0 0 7px 0 #ddd;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 300px;
-    background-color: bisque;
-    height: 25px;
-    /* float: inline-end; */
-  }
+  margin: 0.5rem;
+  box-shadow: 0 0 7px 0 #ddd;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 300px;
+  background-color: bisque;
+  height: 25px;
+  /* float: inline-end; */
+}
 
-  .quiz-list{
-      display: flex;
-      flex-wrap: wrap;
-      
-  }
+.quiz-list {
+  display: flex;
+  flex-wrap: wrap;
+}
 
- .leaders-link {
-  margin: .5rem;
+.leaders-link {
+  margin: 0.5rem;
   box-shadow: 0 0 7px 0 #ddd;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -81,40 +75,45 @@ header img {
   font-size: 20px;
   font-family: verdana;
   display: inline-block;
-  
- }
+}
 
- .home-link {
-   /* display: inline-block; */
-   margin: .5rem;
-   box-shadow: 0 0 7px 0 #ddd;
-   border-radius: 5px;
-   border: 1px solid #ccc;
-   width: 140px;
-   background-color: paleturquoise;
-   height: 25px;
-   font-size: 20px;
-   font-family: Verdana;
-   display: inline-block;
- }
+.home-link {
+  /* display: inline-block; */
+  margin: 0.5rem;
+  box-shadow: 0 0 7px 0 #ddd;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 140px;
+  background-color: paleturquoise;
+  height: 25px;
+  font-size: 20px;
+  font-family: Verdana;
+  display: inline-block;
+}
 
- .results h2{
+.results h2 {
   font-size: 30px;
   text-align: center;
 }
 
-.results p{
- font-size: 20px;
- text-align: center;
- 
+.results p {
+  font-size: 20px;
+  text-align: center;
 }
 
 .results {
- width: 80%;
- background-color: lightblue;
- margin-left: 120px;
- margin-top: 50px;
- padding: 20px
+  width: 80%;
+  background-color: lightblue;
+  margin-left: 120px;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.results form {
+  display: flex;
+  flex: wrap;
+  width: 258px;
+  margin: auto;
 }
 
 .answers-buttons {
