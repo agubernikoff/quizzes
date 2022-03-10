@@ -19,7 +19,7 @@ function LeaderBoard() {
     </tr>
   ));
   return (
-    <div>
+    <div className="tableDiv">
       <h1>LeaderBoard</h1>
       <table>
         <thead>
