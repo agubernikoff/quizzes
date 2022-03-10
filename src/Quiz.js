@@ -16,13 +16,20 @@ function Quiz({ questions, category }) {
     <Question handleAnswerClick={handleAnswerClick} key={q.id} q={q} />
   ));
 
-  function handleAnswerClick(clickedAnswer) {
-    const foundAnswer = scoreArray.find((score) => score === clickedAnswer);
-    questions.forEach((q) => {
-      if (clickedAnswer === q.correctAnswer && foundAnswer === undefined)
+  function handleAnswerClick(clickedAnswer, e) {
+    for (const q of questions) {
+      if (clickedAnswer === q.correctAnswer) {
+        console.log(q.correctAnswer);
+        e.target.parentNode.className = "questions-correct";
         setScoreArray((scoreArray) => [...scoreArray, clickedAnswer]);
-    });
-    setCurrentQuestion(currentQuestion + 1);
+        console.log(e.target.parentNode);
+        break;
+      } else e.target.parentNode.className = "questions-wrong";
+      console.log("wrong");
+
+      console.log(e.target.parentNode.className);
+      setTimeout(() => setCurrentQuestion(currentQuestion + 1), 300);
+    }
   }
   console.log(scoreArray);
 

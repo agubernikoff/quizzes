@@ -91,32 +91,27 @@ header img {
   display: inline-block;
 }
 
-.results h2{
+.results h2 {
   margin-top: 20px;
   font-size: 50px;
   font-family: Verdana;
   color: palegoldenrod;
   text-align: center;
-  text-shadow: -1px 1px 0 #000,
-                  1px 1px 0 #000,
-                 1px -1px 0 #000,
-                -1px -1px 0 #000
-  
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
 }
 
-.results p{
+.results p {
   font-size: 25px;
   text-align: center;
   font-family: Verdana;
   color: plum;
   text-align: center;
-  text-shadow: -1px 1px 0 #000,
-                  1px 1px 0 #000,
-                 1px -1px 0 #000,
-                -1px -1px 0 #000
- }
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+}
 
- .results {
+.results {
   width: 75%;
   background-color: paleturquoise;
   margin-left: 10vw;
@@ -124,8 +119,7 @@ header img {
   padding: 20px;
   box-shadow: 0 0 40px 0 #000;
   border-radius: 15px;
-  
- }
+}
 
 .results form {
   display: flex;
@@ -160,4 +154,25 @@ h1 {
   background-color: paleturquoise;
   margin-left: 14vw;
 }
-
+.questions-correct {
+  width: 70%;
+  text-align: justify;
+  box-shadow: 0 0 20px 0 rgb(0, 145, 0);
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-top: 30px;
+  padding-bottom: 20px;
+  background-color: paleturquoise;
+  margin-left: 14vw;
+}
+.questions-wrong {
+  width: 70%;
+  text-align: justify;
+  box-shadow: 0 0 20px 0 rgb(145, 0, 0);
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-top: 30px;
+  padding-bottom: 20px;
+  background-color: paleturquoise;
+  margin-left: 14vw;
+}

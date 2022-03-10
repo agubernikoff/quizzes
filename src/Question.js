@@ -23,7 +23,15 @@ function Question({ q, handleAnswerClick }) {
 
   const answers = [...q.incorrectAnswers, q.correctAnswer];
   console.log(shuffle(answers));
- const mappedAs = shuffle(answers).map((a) => <button className="answers-buttons" onClick={()=>handleAnswerClick(a)} key={a}>{a}</button>);
+  const mappedAs = shuffle(answers).map((a) => (
+    <button
+      className="answers-buttons"
+      onClick={(e) => handleAnswerClick(a, e)}
+      key={a}
+    >
+      {a}
+    </button>
+  ));
   return (
     <div className="questions-answers">
       <h4>{q.question}</h4>
