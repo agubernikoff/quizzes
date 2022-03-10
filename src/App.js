@@ -24,9 +24,9 @@ function App() {
   const [questions, setQuestions] = useState([]);
   console.log(questions);
 
-  const mappedcategories = categories.map((c) => (
-    <Route path={`/quiz/${c}`} key={c}>
-      <Quiz questions={questions} c={c} key={c} />
+  const quizzes = categories.map((category) => (
+    <Route path={`/quiz/${category}`} key={category}>
+      <Quiz questions={questions} category={category} key={category} />
     </Route>
   ));
 
@@ -34,7 +34,7 @@ function App() {
     <div className="App">
       <Header setQuestions={setQuestions} />
       <Switch>
-        {mappedcategories}
+        {quizzes}
         <Route exact path="/">
           <QuizList categories={categories} setQuestions={setQuestions} />
         </Route>

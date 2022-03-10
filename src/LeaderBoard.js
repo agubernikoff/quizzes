@@ -12,7 +12,7 @@ function LeaderBoard() {
   console.log(leaders);
   const leadersFR = leaders.sort((b, a) => a.score - b.score).slice(0, 10);
   const mappedLeaders = leadersFR.map((leader) => (
-    <tr>
+    <tr key={leader.id}>
       <td>{leader.name}</td>
       <td>{leader.score}</td>
       <td>{leader.category}</td>

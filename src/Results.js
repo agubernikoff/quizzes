@@ -5,12 +5,11 @@ function Results() {
   const [input, setInputValue] = useState("");
   const history = useHistory();
   const score = history.location.state.data.score;
-  const category = history.location.state.data.c.replaceAll("_", " ");
+  const category = history.location.state.data.category.replaceAll("_", " ");
 
   function handleChange(e) {
     setInputValue(e.target.value);
   }
-  console.log(input);
 
   function handleSubmit(e) {
     e.preventDefault();
