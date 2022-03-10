@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 // import LeaderBoard from "./LeaderBoard";
 import Question from "./Question";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import Loading from "./Loading";
 
 function Quiz({ questions, category }) {
   //   const [timeRemaining, setTimeRemaining] = useState(10);
@@ -51,7 +52,7 @@ function Quiz({ questions, category }) {
 
   return (
     <div>
-      {questions[1] ? mappedQs[currentQuestion] : <h4>Loading...</h4>}
+      {questions[1] ? mappedQs[currentQuestion] : <Loading />}
       <button
         className="results-button"
         onClick={() => clickMe({ score, category })}
