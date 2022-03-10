@@ -25,7 +25,7 @@ function Question({ q, handleAnswerClick }) {
   console.log(shuffle(answers));
  const mappedAs = shuffle(answers).map((a) => <button className="answers-buttons" onClick={()=>handleAnswerClick(a)} key={a}>{a}</button>);
   return (
-    <div>
+    <div className="questions-answers">
       <h4>{q.question}</h4>
       {mappedAs}
     </div>

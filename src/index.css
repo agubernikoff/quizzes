@@ -68,11 +68,11 @@ header img {
   margin: 0.5rem;
   box-shadow: 0 0 7px 0 #ddd;
   border-radius: 5px;
-  border: 1px solid #ccc;
-  width: 140px;
-  background-color: paleturquoise;
+  border: 1px solid darkblue;
+  width: 130px;
+  background-color: plum;
   height: 25px;
-  font-size: 20px;
+  font-size: 17px;
   font-family: verdana;
   display: inline-block;
 }
@@ -82,32 +82,50 @@ header img {
   margin: 0.5rem;
   box-shadow: 0 0 7px 0 #ddd;
   border-radius: 5px;
-  border: 1px solid #ccc;
-  width: 140px;
-  background-color: paleturquoise;
+  border: 1px solid darkblue;
+  width: 110px;
+  background-color: plum;
   height: 25px;
-  font-size: 20px;
+  font-size: 17px;
   font-family: Verdana;
   display: inline-block;
 }
 
-.results h2 {
-  font-size: 30px;
+.results h2{
+  margin-top: 20px;
+  font-size: 50px;
+  font-family: Verdana;
+  color: palegoldenrod;
   text-align: center;
+  text-shadow: -1px 1px 0 #000,
+                  1px 1px 0 #000,
+                 1px -1px 0 #000,
+                -1px -1px 0 #000
+  
 }
 
-.results p {
-  font-size: 20px;
+.results p{
+  font-size: 25px;
   text-align: center;
-}
+  font-family: Verdana;
+  color: plum;
+  text-align: center;
+  text-shadow: -1px 1px 0 #000,
+                  1px 1px 0 #000,
+                 1px -1px 0 #000,
+                -1px -1px 0 #000
+ }
 
-.results {
-  width: 80%;
-  background-color: lightblue;
-  margin-left: 120px;
+ .results {
+  width: 75%;
+  background-color: paleturquoise;
+  margin-left: 10vw;
   margin-top: 50px;
   padding: 20px;
-}
+  box-shadow: 0 0 40px 0 #000;
+  border-radius: 15px;
+  
+ }
 
 .results form {
   display: flex;
@@ -117,13 +135,29 @@ header img {
 }
 
 .answers-buttons {
-  display: flexbox;
-  margin-inline-start: 10px;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
 .results-button {
   margin-top: 30px;
+  margin-left: 45vw;
 }
+
 h1 {
   margin: 30px;
 }
+
+.questions-answers {
+  width: 70%;
+  text-align: justify;
+  box-shadow: 0 0 20px 0 #000;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-top: 30px;
+  padding-bottom: 20px;
+  background-color: paleturquoise;
+  margin-left: 14vw;
+}
+
