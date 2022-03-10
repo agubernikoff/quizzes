@@ -176,3 +176,11 @@ h1 {
   background-color: paleturquoise;
   margin-left: 14vw;
 }
+.highscore {
+  text-align: center;
+}
+.highscoreimg {
+  display: block;
+  margin: auto;
+  width: 40%;
+}

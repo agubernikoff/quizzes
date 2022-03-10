@@ -17,6 +17,7 @@ function Quiz({ questions, category }) {
   ));
 
   function handleAnswerClick(clickedAnswer, e) {
+    setTimeout(() => setCurrentQuestion(currentQuestion + 1), 150);
     for (const q of questions) {
       if (clickedAnswer === q.correctAnswer) {
         console.log(q.correctAnswer);
@@ -28,7 +29,6 @@ function Quiz({ questions, category }) {
       console.log("wrong");
 
       console.log(e.target.parentNode.className);
-      setTimeout(() => setCurrentQuestion(currentQuestion + 1), 300);
     }
   }
   console.log(scoreArray);
