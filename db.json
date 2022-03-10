@@ -29,6 +29,42 @@
       "score": 0,
       "name": "alex",
       "id": 5
+    },
+    {
+      "category": "sport and leisure",
+      "score": 1,
+      "name": "aaaa",
+      "id": 6
+    },
+    {
+      "category": "music",
+      "score": 0,
+      "name": "aaaa",
+      "id": 7
+    },
+    {
+      "category": "movies",
+      "score": 0,
+      "name": "ffff",
+      "id": 8
+    },
+    {
+      "category": "science",
+      "score": 0,
+      "name": "ddddd",
+      "id": 9
+    },
+    {
+      "category": "movies",
+      "score": 0,
+      "name": "sssss",
+      "id": 10
+    },
+    {
+      "category": "geography",
+      "score": 2,
+      "name": "ayyyy",
+      "id": 11
     }
   ]
 }
