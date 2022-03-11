@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function QuizList({ categories, setQuestions }) {
   function fetchOnClick(c) {
-    fetch(`https://api.trivia.willfry.co.uk/questions?categories=${c}&limit=5`)
+    fetch(`https://api.trivia.willfry.co.uk/questions?categories=${c}&limit=10`)
       .then((resp) => resp.json())
       .then((data) => setQuestions(data));
   }
