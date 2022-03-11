@@ -16,19 +16,26 @@ function Quiz({ questions, category }) {
     <Question handleAnswerClick={handleAnswerClick} key={q.id} q={q} />
   ));
 
+  function animateBackground(div, feedback) {
+    setTimeout(() => (div.className = "quiz-question"), 250);
+    div.className = feedback;
+  }
+
   function handleAnswerClick(clickedAnswer, e) {
-    setTimeout(() => setCurrentQuestion(currentQuestion + 1), 150);
+    setCurrentQuestion(currentQuestion + 1);
     for (const q of questions) {
       if (clickedAnswer === q.correctAnswer) {
         console.log(q.correctAnswer);
-        e.target.parentNode.className = "questions-correct";
+        // e.target.parentNode.className = "questions-correct";
+        animateBackground(e.target.parentNode.parentNode, "correct");
         setScoreArray((scoreArray) => [...scoreArray, clickedAnswer]);
         console.log(e.target.parentNode);
         break;
-      } else e.target.parentNode.className = "questions-wrong";
+      } else animateBackground(e.target.parentNode.parentNode, "wrong");
+      // e.target.parentNode.className = "questions-wrong";
       console.log("wrong");
 
-      console.log(e.target.parentNode.className);
+      console.log(e.target.parentNode.parentNode.className);
     }
   }
   console.log(scoreArray);

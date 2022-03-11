@@ -64,16 +64,31 @@ header img {
   flex-wrap: wrap;
 }
 
-.quiz-list-container{
-  background-color: #8A3D75;
+.quiz-list-container {
+  background-color: #8a3d75;
   height: 400px;
 }
 
-.quiz-question{
-  background-color: #8A3D75;
+.quiz-question {
+  background-color: #8a3d75;
   height: 400px;
   width: 100%;
   display: inline-block;
+  transition: 0.25s;
+}
+.correct {
+  background-color: #408a3d;
+  height: 400px;
+  width: 100%;
+  display: inline-block;
+  transition: 0.25s;
+}
+.wrong {
+  background-color: #d12222;
+  height: 400px;
+  width: 100%;
+  display: inline-block;
+  transition: 0.25s;
 }
 
 .leaders-link {
@@ -103,8 +118,8 @@ header img {
   display: inline-block;
 }
 
-.results-container{
-  background-color: #8A3D75;
+.results-container {
+  background-color: #8a3d75;
   height: 400px;
   display: flex;
 }
@@ -204,7 +219,7 @@ h1 {
 }
 
 .tableDiv {
-  display: inline-block; 
+  display: inline-block;
   background-image: url("http://www.clipartsuggest.com/images/679/award-plaques-clipart-plaque-clipart-HThLrq-clipart.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -212,24 +227,21 @@ h1 {
   height: 450px;
   margin-left: 28vw;
   margin-top: 40px;
-  
 }
 
-.tableDiv h1{
+.tableDiv h1 {
   margin-left: 100px;
   margin-top: 40px;
-  color: #CB7F7F;
-  font-family: 'American Typewriter';
+  color: #cb7f7f;
+  font-family: "American Typewriter";
   margin-bottom: 10px;
   text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
-  -1px -1px 0 #000;
-
+    -1px -1px 0 #000;
 }
 
-.tableDiv table{
+.tableDiv table {
   margin-left: 75px;
-  font-family: 'American Typewriter';
+  font-family: "American Typewriter";
   font-size: 18px;
-  color: #CB7F7F;
-  
+  color: #cb7f7f;
 }
