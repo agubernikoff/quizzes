@@ -18,7 +18,7 @@ function Results() {
       score: score,
       name: input,
     };
-    fetch("http://localhost:3001/leaders", {
+    fetch("http://localhost:3001/leaderboard", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newScore),
