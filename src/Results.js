@@ -26,7 +26,7 @@ function Results() {
       .then((resp) => resp.json())
       .then((data) => console.log(data));
     setInputValue("");
-    history.push("/leaders");
+    history.push("/leaderboard");
   }
 
   const [leaders, setLeaders] = useState([]);
