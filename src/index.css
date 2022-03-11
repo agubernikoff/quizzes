@@ -220,14 +220,13 @@ h1 {
 }
 
 .tableDiv {
-  display: inline-block;
+  display: block;
   background-image: url("http://www.clipartsuggest.com/images/679/award-plaques-clipart-plaque-clipart-HThLrq-clipart.png");
   background-repeat: no-repeat;
   background-size: contain;
   width: 600px;
   height: 450px;
-  margin-left: 28vw;
-  margin-top: 40px;
+  margin: auto;
 }
 
 .tableDiv h1 {
