@@ -38,7 +38,7 @@ function App() {
         <Route exact path="/">
           <QuizList categories={categories} setQuestions={setQuestions} />
         </Route>
-        <Route path="/leader">
+        <Route path="/leaderboard">
           <LeaderBoard />
         </Route>
         <Route exact path="/results">
