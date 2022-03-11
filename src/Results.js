@@ -32,7 +32,7 @@ function Results() {
   const [leaders, setLeaders] = useState([]);
   useEffect(
     () =>
-      fetch("http://localhost:3001/leaders")
+      fetch("https://cryptic-hamlet-61140.herokuapp.com/leaders")
         .then((resp) => resp.json())
         .then((data) => setLeaders(data)),
     []
@@ -45,44 +45,44 @@ function Results() {
   leaders.sort((b, a) => a.score - b.score);
   // console.log(leaders[0].score);
   return (
-   <div className= "results-container">
-    <div className="results">
-      <h2>Results</h2>
-      {leaders[0] && score > leaders[0].score ? (
-        <div>
-          <img
-            className="highscoreimg"
-            src="https://media1.giphy.com/media/oKDVEmtRZLQLUoGHq0/200w.gif?cid=82a1493bdclydewjogn0zdimlkud4n3qyg9fi9ylv236hsmp&rid=200w.gif&ct=g"
-            alt="highscore1"
-          />
+    <div className="results-container">
+      <div className="results">
+        <h2>Results</h2>
+        {leaders[0] && score > leaders[0].score ? (
+          <div>
+            <img
+              className="highscoreimg"
+              src="https://media1.giphy.com/media/oKDVEmtRZLQLUoGHq0/200w.gif?cid=82a1493bdclydewjogn0zdimlkud4n3qyg9fi9ylv236hsmp&rid=200w.gif&ct=g"
+              alt="highscore1"
+            />
+            <br></br>
+          </div>
+        ) : null}
+        <p>category: {category}</p>
+        <p>Score: {score}</p>
+        <form onSubmit={handleSubmit}>
+          <label>Name:</label>
+          <input
+            type="text"
+            name="name"
+            value={input}
+            onChange={handleChange}
+          ></input>
           <br></br>
-        </div>
-      ) : null}
-      <p>category: {category}</p>
-      <p>Score: {score}</p>
-      <form onSubmit={handleSubmit}>
-        <label>Name:</label>
-        <input
-          type="text"
-          name="name"
-          value={input}
-          onChange={handleChange}
-        ></input>
-        <br></br>
-        <input type="submit"></input>
-      </form>
-      {leaders[0] && score > leaders[0].score ? (
-        <div>
-          <br></br>
-          <img
-            className="highscoreimg"
-            src="https://y.yarn.co/60af5174-1127-4a7b-8f9f-2204a0705184_text.gif"
-            alt="highscore2"
-          />
-        </div>
-      ) : null}
+          <input type="submit"></input>
+        </form>
+        {leaders[0] && score > leaders[0].score ? (
+          <div>
+            <br></br>
+            <img
+              className="highscoreimg"
+              src="https://y.yarn.co/60af5174-1127-4a7b-8f9f-2204a0705184_text.gif"
+              alt="highscore2"
+            />
+          </div>
+        ) : null}
+      </div>
     </div>
-    </div>   
   );
 }
 

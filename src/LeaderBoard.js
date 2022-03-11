@@ -4,7 +4,7 @@ function LeaderBoard() {
   const [leaders, setLeaders] = useState([]);
   useEffect(
     () =>
-      fetch("http://localhost:3001/leaders")
+      fetch("https://cryptic-hamlet-61140.herokuapp.com/leaders")
         .then((resp) => resp.json())
         .then((data) => setLeaders(data)),
     []
