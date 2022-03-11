@@ -17,7 +17,7 @@ function Header({ setQuestions }) {
         </Link>
       </div>
       <div className="leaders-link">
-        <Link to="leaders">Leader Board</Link>
+        <Link to="leaderboard">Leader Board</Link>
       </div>
     </header>
   );
