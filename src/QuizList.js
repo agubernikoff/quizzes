@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 
 function QuizList({ categories, setQuestions }) {
   function fetchOnClick(c) {
-    fetch(`https://api.trivia.willfry.co.uk/questions?categories=${c}&limit=10`)
+    fetch(
+      `https://shielded-brook-55953.herokuapp.com/https://api.trivia.willfry.co.uk/questions?categories=${c}&limit=10`
+    )
       .then((resp) => resp.json())
       .then((data) => setQuestions(data));
   }
