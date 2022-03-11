@@ -58,7 +58,7 @@ function Quiz({ questions, category }) {
   // console.log(questions[1].category.toLowerCase().includes(c.toLowerCase()));
 
   return (
-    <div>
+    <div className="quiz-question">
       {questions[1] ? mappedQs[currentQuestion] : <Loading />}
       <button
         className="results-button"

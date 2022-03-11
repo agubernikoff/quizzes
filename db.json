@@ -65,6 +65,18 @@
       "score": 2,
       "name": "ayyyy",
       "id": 11
+    },
+    {
+      "category": "movies",
+      "score": 2,
+      "name": "Teddy",
+      "id": 12
+    },
+    {
+      "category": "geography",
+      "score": 1,
+      "name": "LW",
+      "id": 13
     }
   ]
 }

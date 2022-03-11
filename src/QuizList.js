@@ -16,9 +16,11 @@ function QuizList({ categories, setQuestions }) {
     </ul>
   ));
   return (
-    <div className="quiz-list">
-      <h2>Quiz List</h2>
-      {mappedcategories}
+    <div className="quiz-list-container">
+      <div className="quiz-list">
+        <h2>Quiz List</h2>
+        {mappedcategories}
+      </div>
     </div>
   );
 }

@@ -45,6 +45,7 @@ function Results() {
   leaders.sort((b, a) => a.score - b.score);
   // console.log(leaders[0].score);
   return (
+   <div className= "results-container">
     <div className="results">
       <h2>Results</h2>
       {leaders[0] && score > leaders[0].score ? (
@@ -76,6 +77,7 @@ function Results() {
         <input type="submit"></input>
       </form>
     </div>
+    </div>   
   );
 }
 

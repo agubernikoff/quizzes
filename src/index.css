@@ -64,6 +64,18 @@ header img {
   flex-wrap: wrap;
 }
 
+.quiz-list-container{
+  background-color: #8A3D75;
+  height: 400px;
+}
+
+.quiz-question{
+  background-color: #8A3D75;
+  height: 400px;
+  width: 100%;
+  display: inline-block;
+}
+
 .leaders-link {
   margin: 0.5rem;
   box-shadow: 0 0 7px 0 #ddd;
@@ -91,6 +103,11 @@ header img {
   display: inline-block;
 }
 
+.results-container{
+  background-color: #8A3D75;
+  height: 400px;
+  display: flex;
+}
 .results h2 {
   margin-top: 20px;
   font-size: 50px;
@@ -113,6 +130,7 @@ header img {
 
 .results {
   width: 75%;
+  height: 75%;
   background-color: paleturquoise;
   margin-left: 10vw;
   margin-top: 50px;
@@ -183,4 +201,35 @@ h1 {
   display: block;
   margin: auto;
   width: 40%;
+}
+
+.tableDiv {
+  display: inline-block; 
+  background-image: url("http://www.clipartsuggest.com/images/679/award-plaques-clipart-plaque-clipart-HThLrq-clipart.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 600px;
+  height: 450px;
+  margin-left: 28vw;
+  margin-top: 40px;
+  
+}
+
+.tableDiv h1{
+  margin-left: 100px;
+  margin-top: 40px;
+  color: #CB7F7F;
+  font-family: 'American Typewriter';
+  margin-bottom: 10px;
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
+  -1px -1px 0 #000;
+
+}
+
+.tableDiv table{
+  margin-left: 75px;
+  font-family: 'American Typewriter';
+  font-size: 18px;
+  color: #CB7F7F;
+  
 }
